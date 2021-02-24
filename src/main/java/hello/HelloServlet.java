@@ -131,6 +131,8 @@ public class HelloServlet extends HttpServlet {
         }
         
         String nome = request.getParameter("nome");
+		String idade = request.getParameter("idade");
+		String rg = request.getParameter("rg");
 
         if(nome==null)
             nome = "Fulano";
@@ -148,6 +150,8 @@ public class HelloServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>" + msg + "</p>");
+			out.println("<p>Você tem " + idade + " anos, correto?</p>");
+			out.println("<p>Possuidor do seguinte RG: " + rg + ", correto?</p>");
             out.println("</body>");
             out.println("</html>");
         }
